@@ -19,5 +19,10 @@
 			<type>2</type>
 			<location>/comptes/E104607D/Documents/obeo/fr.obeo.dsl.tuto.mindstorms</location>
 		</link>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>/comptes/E104607D/Desktop/M2/sirius-alma-2016/project/org.obeonetwork.dsl.dart/bin</location>
+		</link>
 	</linkedResources>
 </projectDescription>

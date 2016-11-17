@@ -1,6 +1,7 @@
 package fr.univnantes.alma.dsl.dart.design;
 
 import org.eclipse.emf.ecore.EObject;
+import org.obeonetwork.dsl.dart.*;
 
 /**
  * The services class used by VSM.
@@ -14,4 +15,9 @@ public class Services {
        // TODO Auto-generated code
       return self;
     }
+    
+    public boolean isHtml(Asset asset) {    	    	
+    	return asset.getName().endsWith(".html");    	
+    }
+
 }

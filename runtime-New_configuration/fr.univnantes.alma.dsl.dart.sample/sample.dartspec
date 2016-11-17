@@ -3,12 +3,11 @@
   <packages>
     <assets xsi:type="dart:Folder" name="lib">
       <assets xsi:type="dart:Folder" name="emptyfolder">
-      	<assets xsi:type="dart:Folder" name="emptyfolder2">
-      	</assets>
+        <assets xsi:type="dart:Folder" name="emptyfolder2"/>
       </assets>
       <assets xsi:type="dart:Folder" name="components">
         <assets xsi:type="dart:HTML" name="agenda.html" uses="//@packages.0/@assets.2/@assets.2/@assets.2 //@packages.0/@assets.2/@assets.0/@assets.0"/>
-        <assets xsi:type="dart:Component" name="Agenda" documentation="" extends="//@packages.0/@assets.0/@assets.0/@assets.2" template="//@packages.0/@assets.0/@assets.0/@assets.0" selector="agenda"/>
+        <assets xsi:type="dart:Component" name="Agenda" documentation="" selector="agenda"/>
         <assets xsi:type="dart:Class" name="AgendaComponent">
           <methods name="addItem">
             <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.1"/>
@@ -23,19 +22,19 @@
         </assets>
         <assets xsi:type="dart:HTML" name="call.html" uses="//@packages.0/@assets.2/@assets.2/@assets.1 //@packages.0/@assets.2/@assets.2/@assets.2"/>
         <assets xsi:type="dart:Class" name="CallComponent">
-          <fields name="model" type="//@packages.0/@assets.0/@assets.2/@assets.1"/>
+          <fields name="model"/>
           <fields name="isOnline">
             <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.1"/>
           </fields>
           <methods name="attach"/>
         </assets>
-        <assets xsi:type="dart:Component" name="Call" extends="//@packages.0/@assets.0/@assets.0/@assets.4" publishAs="" template="//@packages.0/@assets.0/@assets.0/@assets.3" selector="call"/>
+        <assets xsi:type="dart:Component" name="Call" publishAs="" selector="call"/>
         <assets xsi:type="dart:HTML" name="create_call.html" uses="//@packages.0/@assets.2/@assets.2/@assets.2"/>
         <assets xsi:type="dart:Class" name="CreateCallComponent">
-          <fields name="call" type="//@packages.0/@assets.0/@assets.2/@assets.1"/>
+          <fields name="call"/>
           <methods name="create"/>
         </assets>
-        <assets xsi:type="dart:Component" name="CreateCall" extends="//@packages.0/@assets.0/@assets.0/@assets.7" template="//@packages.0/@assets.0/@assets.0/@assets.6" selector="create-call"/>
+        <assets xsi:type="dart:Component" name="CreateCall" selector="create-call"/>
       </assets>
       <assets xsi:type="dart:Folder" name="decorators">
         <assets xsi:type="dart:Decorator" name="Toggle">
@@ -73,17 +72,18 @@
             <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.1"/>
           </fields>
         </assets>
+        <assets xsi:type="dart:Class" name="new class" extends="//@packages.0/@assets.0/@assets.3/@assets.2"/>
       </assets>
       <assets xsi:type="dart:Folder" name="services">
         <assets xsi:type="dart:Class" name="CallSerializer">
           <methods name="serialize">
             <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.8"/>
-            <parameters name="call" value="" type="//@packages.0/@assets.0/@assets.2/@assets.1"/>
+            <parameters name="call" value=""/>
             <parameters name="id">
               <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.8"/>
             </parameters>
           </methods>
-          <methods name="deserialize" type="//@packages.0/@assets.0/@assets.2/@assets.1">
+          <methods name="deserialize">
             <parameters name="content">
               <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.8"/>
             </parameters>
@@ -92,7 +92,7 @@
         <assets xsi:type="dart:Class" name="CallStorage">
           <methods name="store">
             <type xsi:type="dart:Class" href="../../plugin/org.obeonetwork.dsl.dart/model/dartlang.dartspec#//@packages.0/@assets.2/@assets.8"/>
-            <parameters name="call" type="//@packages.0/@assets.0/@assets.2/@assets.1"/>
+            <parameters name="call"/>
           </methods>
         </assets>
         <assets xsi:type="dart:Class" name="Messages">

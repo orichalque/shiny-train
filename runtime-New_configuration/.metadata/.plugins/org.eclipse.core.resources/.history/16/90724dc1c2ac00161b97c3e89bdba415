@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="mindstorms" version="11.1.1.201610211630">
+  <ownedViewpoints name="Mindstorms" modelFileExtension="mindstorms">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Choreography Diagram" domainClass="mindstorms.Choreography" enablePopupBars="true">
+      <metamodel href="file:/comptes/E104607D/Documents/obeo/fr.obeo.dsl.tuto.mindstorms/model/mindstorms.ecore#/"/>
+      <validationSet name="A class has a name"/>
+      <layout xsi:type="description_1:CompositeLayout" direction="LeftToRight"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="CD_Start" semanticCandidatesExpression="var:self" domainClass="mindstorms.Choreography">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Start.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CD_Instruction" labelDirectEdit="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Direct_Edit']" semanticCandidatesExpression="feature:instructions" domainClass="mindstorms.Action">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Instruction.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="CD_First" sourceMapping="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Start']" targetMapping="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction'] //@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']" targetFinderExpression="aql:self.instructions->at(1)" reconnections="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='CD_First']">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CD_Next" sourceMapping="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction'] //@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']" targetMapping="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction'] //@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']" targetFinderExpression="service:getNextInstruction()" reconnections="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='CD_Next']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="CD_SubChoreography" labelDirectEdit="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Direct_Edit']" semanticCandidatesExpression="feature:instructions" doubleClickDescription="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Double_Click_Choreography']" domainClass="mindstorms.Choreography" childrenPresentation="List">
+          <subNodeMappings name="Cd_SubInstruction" labelDirectEdit="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Direct_Edit']" semanticCandidatesExpression="feature:instructions" domainClass="mindstorms.Instruction">
+            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='user%20color%20palette']/@entries[name='MindstormColor2']" labelSize="12" showIcon="false" backgroundColor="//@userColorsPalettes[name='user%20color%20palette']/@entries[name='MindstormColor1']" foregroundColor="//@userColorsPalettes[name='user%20color%20palette']/@entries[name='MindstormColor1']">
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="New">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="GoForward" nodeMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoForward_16px.png" extraMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.GoForward" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="cm" valueExpression="50"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Grab" nodeMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Grab_16px.png" extraMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Grab" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Release" nodeMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Release_16px.png" extraMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Release" referenceName="instructions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RotateRight" nodeMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Right_16px.png" extraMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Rotate" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="degrees" valueExpression="aql:30"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="RotateLeft" nodeMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']" iconPath="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Left_16px.png" extraMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Rotate" referenceName="instructions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="degrees" valueExpression="aql:-30"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Choreography" containerMappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="mindstorms.Choreography" referenceName="instructions">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newChoreography"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="CD_First">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setFirstInstruction(target)"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="CD_Next">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element.setNextInstruction(target)"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Double_Click_Choreography" mappings="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Direct_Edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:Switch">
+                <cases conditionExpression="aql:self.oclIsKindOf(mindstorms::Choreography)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="switch case Direct Edit Set Choreography" valueExpression="var:arg0"/>
+                </cases>
+                <cases conditionExpression="aql:self.oclIsKindOf(mindstorms::Rotate)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:editRotateLabel(arg0)"/>
+                </cases>
+                <cases conditionExpression="aql:self.oclIsKindOf(mindstorms::GoForward)">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="switch case Direct Edit Set Go Forward" valueExpression="var:arg0"/>
+                </cases>
+                <default/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Choreography)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style //@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']/@subNodeMappings[name='Cd_SubInstruction']/@style" attributeName="labelExpression" value="feature:name"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::GoForward)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style //@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@containerMappings[name='CD_SubChoreography']/@subNodeMappings[name='Cd_SubInstruction']/@style" attributeName="labelExpression" value="aql:self.cm + ' cm'"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/GoForward.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Rotate)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="labelExpression" value="aql:if (self.random) then '?' else self.degrees + '°' endif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Grab)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Grab.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Release)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Release.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Rotate) and self.degrees &lt; 0">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Left.svg"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclIsKindOf(mindstorms::Rotate) and self.degrees > 0">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Mindstorms']/@ownedRepresentations[name='Choreography%20Diagram']/@defaultLayer/@nodeMappings[name='CD_Instruction']/@style" attributeName="workspacePath" value="/fr.obeo.dsl.tuto.mindstorms.design/icons/Rotate_Right.svg"/>
+          </vsmElementCustomizations>
+        </customization>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.dsl.tuto.mindstorms.design.Services"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="user color palette">
+    <entries xsi:type="description:UserFixedColor" red="186" green="223" blue="225" name="MindstormColor1"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="119" blue="136" name="MindstormColor2"/>
+  </userColorsPalettes>
+</description:Group>

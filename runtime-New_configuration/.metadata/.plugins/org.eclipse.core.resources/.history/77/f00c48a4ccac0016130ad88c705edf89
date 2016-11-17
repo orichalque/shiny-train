@@ -1,0 +1,14 @@
+package fr.univnantes.alma.dsl.dart.design.service;
+
+
+public class FileType {
+	
+	public boolean isHtml(Asset asset) {
+		
+		if (name.endsWith(".html")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
